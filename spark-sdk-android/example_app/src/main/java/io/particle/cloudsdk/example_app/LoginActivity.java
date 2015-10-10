@@ -68,7 +68,7 @@ public class LoginActivity extends AppCompatActivity {
                             public Integer callApi(ParticleCloud sparkCloud) throws ParticleCloudException, IOException {
                                 sparkCloud.logIn(email, password);
                                 sparkCloud.getDevices();
-                                mDevice = sparkCloud.getDevice("131112984789237192373738");
+                                mDevice = sparkCloud.getDevice("1321112984789237192373738");
                                 Integer variable;
                                 try {
                                     variable = mDevice.getVariable("analogvalue");
