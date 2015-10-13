@@ -1,0 +1,23 @@
+<resources>
+    <string name="device_name">Smart Mirror</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <color name="brand_image_background_color">#000000</color>
+    <drawable name="device_image">@drawable/photon_vector</drawable>
+    <drawable name="device_image_small">@drawable/photon_vector_small</drawable>
+    <drawable name="brand_image_horizontal">@drawable/particle_horizontal_blue</drawable>
+    <drawable name="brand_image_vertical">@drawable/particle_vertical_blue</drawable>
+    <drawable name="screen_background">@drawable/trianglifybackground</drawable>
+
+    <color name="page_background_color">#F2F2F2</color>
+    <color name="form_field_background_color">@android:color/white</color>
+    <color name="normal_text_color">@android:color/white</color>
+    <color name="link_text_color">@android:color/white</color>
+    <color name="link_text_bg">#000000</color>
+    <color name="error_text_color">#FE4747</color>
+    <color name="element_background_color">#bb5b3e</color>
+    <color name="element_background_color_dark">#974932</color>
+    <color name="element_text_color">@android:color/white</color>
+    <color name="element_text_disabled_color">#E0E0E0</color>
+</resources>
