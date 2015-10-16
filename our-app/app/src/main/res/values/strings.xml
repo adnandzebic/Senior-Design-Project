@@ -1,33 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="device_name">Smart Mirror</string>
 
-    <string name="tinker_instructions"><![CDATA[Welcome to Tinker!\n\n
-Tinker is the fastest and easiest way to prototype and play with your Photon.\n\n
-You can access the basic input/output functions of the Photon without writing a line of code.\n\n
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <color name="brand_image_background_color">#000000</color>
+    <drawable name="device_image">@drawable/photon_vector</drawable>
+    <drawable name="device_image_small">@drawable/photon_vector_small</drawable>
+    <drawable name="brand_image_horizontal">@drawable/particle_horizontal_blue</drawable>
+    <drawable name="brand_image_vertical">@drawable/particle_vertical_blue</drawable>
+    <drawable name="screen_background">@drawable/trianglifybackground</drawable>
+
+    <color name="page_background_color">#F2F2F2</color>
+    <color name="form_field_background_color">@android:color/white</color>
+    <color name="normal_text_color">@android:color/white</color>
+    <color name="link_text_color">@android:color/white</color>
+    <color name="link_text_bg">#000000</color>
+    <color name="error_text_color">#FE4747</color>
+    <color name="element_background_color">#bb5b3e</color>
+    <color name="element_background_color_dark">#974932</color>
+    <color name="element_text_color">@android:color/white</color>
+    <color name="element_text_disabled_color">#E0E0E0</color>
+
+    <string name="tinker_instructions"><![CDATA[Welcome to the Smart Mirror App!\n\n
+The Smart Mirror App is the fastest and easiest way to configure and play with your Smart Mirror.\n\n
+You can access the basic input/output functions of the Smart Mirror without writing a line of code.\n\n
 Tap any pin to get started, select a pin function and tinker with the value. Hold a pin to reset its function. Start with pin D7 - select digitalWrite - blink the attached LED.\n\n
-For more information visit: docs.particle.io/photon/tinker/\n\n
+For more information visit: adnandzebic.com/\n\n
 Enjoy!]]></string>
-    <string name="tinker_instructions_signature"><i>-The Particle Team</i></string>
-    <string name="title_device_list">Devices</string>
+    <string name="tinker_instructions_signature"><i>-Adnan and Hardeep</i></string>
+    <string name="title_device_list">Smart Mirrors</string>
     <string name="title_device_detail">Device rulsDetail</string>
     <string name="clear_tinker">Reset all pin functions</string>
-    <string name="your_devices">Your Devices</string>
-    <string name="unnamed_device">(Unnamed device)</string>
+    <string name="your_devices">Your Smart Mirrors</string>
+    <string name="unnamed_device">(Unnamed smart mirror)</string>
     <string name="online">Online</string>
     <string name="offline">Offline</string>
     <string name="unclaim">Unclaim</string>
-    <string name="unclaim_device_dialog_content">Unclaim device?</string>
+    <string name="unclaim_device_dialog_content">Unclaim smart mirror?</string>
     <string name="rename_menu_title">Rename…</string>
     <string name="flash">Flash</string>
     <string name="copy_device_id_to_clipboard">Copy device ID to clipboard</string>
-    <string name="docs_link_menu_particle_app_tinker">Particle app/Tinker</string>
-    <string name="docs_link_menu_setting_up_your_device">Setting up your Photon/Core</string>
+    <string name="docs_link_menu_particle_app_tinker">Smart Mirror App</string>
+    <string name="docs_link_menu_setting_up_your_device">Setting up your Smart Mirror</string>
     <string name="docs_link_menu_create_your_own_android_app">Create your own Android app</string>
-    <string name="particle_support">Particle support</string>
-    <string name="particle_community">Particle community</string>
+    <string name="particle_support">Smart Mirror support</string>
+    <string name="particle_community">Smart Mirror community</string>
 
 <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="err_msg_device_is_offline">This device is offline, please turn it on and refresh in order to Tinker with it.</string>
+    <string name="err_msg_device_is_offline">This smart mirror is offline, please turn it on and refresh in order to Tinker with it.</string>
+
+    <string name="product_model_name">Smart Mirror V1</string>
+    <string name="brand_name">Smart Mirror</string>
 
 </resources>
