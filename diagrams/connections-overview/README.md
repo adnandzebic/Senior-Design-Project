@@ -16,5 +16,5 @@ $ blockdiag -f fonts/Roboto-Regular.ttf -Tpng connections-overview.diag
 ```
 
 Result:
-![][https://raw.githubusercontent.com/adnandzebic/Senior-Design-Project/master/diagrams/connections-overview/connections-overview.png]
-![][https://raw.githubusercontent.com/adnandzebic/Senior-Design-Project/master/diagrams/connections-overview/connections-overview.svg]
+![][_static/connections-overview.png]
+![][_static/connections-overview.svg]
