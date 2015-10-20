@@ -1,8 +1,8 @@
 blockdiag {
 
-   android [label = "", background = "https://raw.githubusercontent.com/adnandzebic/Senior-Design-Project/master/diagrams/connections-overview/_static/android.png"];
-   photon [label = "", background = "https://raw.githubusercontent.com/adnandzebic/Senior-Design-Project/master/diagrams/connections-overview/_static/photon.png"];
-   beaglebone [label = "", background = "https://raw.githubusercontent.com/adnandzebic/Senior-Design-Project/master/diagrams/connections-overview/_static/BBB.png"];
+   android [label = "", background = "_static/android.png"];
+   photon [label = "", background = "_static/photon.png"];
+   beaglebone [label = "", background = "_static/BBB.png"];
 
    LCD [fontsize = 40];
 
