@@ -1,0 +1,29 @@
+blockdiag {
+
+   android [label = "", background = "_static/android.png"];
+   photon [label = "", background = "_static/photon.png"];
+   beaglebone [label = "", background = "_static/BBB.png"];
+
+   LCD [fontsize = 40];
+
+   // Set arrow direction to edges.
+   android -> photon [dir = forward];
+   photon -> beaglebone [dir = forward];
+   beaglebone -> LCD [dir = forward];
+
+   // Set width and height of nodes.
+   android [height = 70, width = 200];
+   photon [height = 100];
+   beaglebone [height = 100];
+   LCD [height = 70, width = 200]
+
+   // Use thick lines
+   android -> photon [thick]
+   photon -> beaglebone [thick]
+   beaglebone -> LCD [thick]
+
+   // Put labels
+   android -> photon [label = WiFi]
+   photon -> beaglebone [label = Serial]
+   beaglebone -> LCD [label = HDMI]
+}

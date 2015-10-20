@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg viewBox="0 0 976 180" xmlns="http://www.w3.org/2000/svg" xmlns:inkspace="http://www.inkscape.org/namespaces/inkscape" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs id="defs_block">
+    <filter height="1.504" id="filter_blur" inkspace:collect="always" width="1.1575" x="-0.07875" y="-0.252">
+      <feGaussianBlur id="feGaussianBlur3780" inkspace:collect="always" stdDeviation="4.2" />
+    </filter>
+  </defs>
+  <title>blockdiag</title>
+  <desc>blockdiag {
+
+   android [label = "", background = "_static/android.png"];
+   photon [label = "", background = "_static/photon.png"];
+   beaglebone [label = "", background = "_static/BBB.png"];
+
+   LCD [fontsize = 40];
+
+   // Set arrow direction to edges.
+   android -&gt; photon [dir = forward];
+   photon -&gt; beaglebone [dir = forward];
+   beaglebone -&gt; LCD [dir = forward];
+
+   // Set width and height of nodes.
+   android [height = 70, width = 200];
+   photon [height = 100];
+   beaglebone [height = 100];
+   LCD [height = 70, width = 200]
+
+   // Use thick lines
+   android -&gt; photon [thick]
+   photon -&gt; beaglebone [thick]
+   beaglebone -&gt; LCD [thick]
+
+   // Put labels
+   android -&gt; photon [label = WiFi]
+   photon -&gt; beaglebone [label = Serial]
+   beaglebone -&gt; LCD [label = HDMI]
+}
+</desc>
+  <rect fill="rgb(0,0,0)" height="70" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="200" x="67" y="61" />
+  <rect fill="rgb(0,0,0)" height="100" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="331" y="46" />
+  <rect fill="rgb(0,0,0)" height="100" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="523" y="46" />
+  <rect fill="rgb(0,0,0)" height="70" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="200" x="715" y="61" />
+  <rect fill="rgb(255,255,255)" height="70" stroke="rgb(255,255,255)" width="200" x="64" y="55" />
+  <image height="70" width="200" x="64" xlink:href="_static/android.png" y="55" />
+  <rect fill="none" height="70" stroke="rgb(0,0,0)" width="200" x="64" y="55" />
+  <rect fill="rgb(255,255,255)" height="100" stroke="rgb(255,255,255)" width="128" x="328" y="40" />
+  <image height="100" width="128" x="328" xlink:href="_static/photon.png" y="40" />
+  <rect fill="none" height="100" stroke="rgb(0,0,0)" width="128" x="328" y="40" />
+  <rect fill="rgb(255,255,255)" height="100" stroke="rgb(255,255,255)" width="128" x="520" y="40" />
+  <image height="100" width="128" x="520" xlink:href="_static/BBB.png" y="40" />
+  <rect fill="none" height="100" stroke="rgb(0,0,0)" width="128" x="520" y="40" />
+  <rect fill="rgb(255,255,255)" height="70" stroke="rgb(0,0,0)" width="200" x="712" y="55" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="40" font-style="normal" font-weight="normal" text-anchor="middle" textLength="74" x="812" y="109">LCD</text>
+  <path d="M 264 90 L 320 90" fill="none" stroke="rgb(0,0,0)" stroke-width="3" />
+  <polygon fill="rgb(0,0,0)" points="327,90 320,86 320,94 327,90" stroke="rgb(0,0,0)" />
+  <path d="M 456 90 L 512 90" fill="none" stroke="rgb(0,0,0)" stroke-width="3" />
+  <polygon fill="rgb(0,0,0)" points="519,90 512,86 512,94 519,90" stroke="rgb(0,0,0)" />
+  <path d="M 648 90 L 704 90" fill="none" stroke="rgb(0,0,0)" stroke-width="3" />
+  <polygon fill="rgb(0,0,0)" points="711,90 704,86 704,94 711,90" stroke="rgb(0,0,0)" />
+  <rect fill="white" height="14" stroke="rgb(0,0,0)" width="38" x="277" y="53" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="22" x="296" y="65">WiFi</text>
+  <rect fill="white" height="14" stroke="rgb(0,0,0)" width="45" x="466" y="53" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="29" x="488" y="65">Serial</text>
+  <rect fill="white" height="14" stroke="rgb(0,0,0)" width="44" x="658" y="53" />
+  <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="11" font-style="normal" font-weight="normal" text-anchor="middle" textLength="28" x="680" y="65">HDMI</text>
+</svg>
