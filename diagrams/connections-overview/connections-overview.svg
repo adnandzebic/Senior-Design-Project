@@ -9,9 +9,9 @@
   <title>blockdiag</title>
   <desc>blockdiag {
 
-   android [label = "", background = "_static/android.png"];
-   photon [label = "", background = "_static/photon.png"];
-   beaglebone [label = "", background = "_static/BBB.png"];
+   android [label = "", background = "https://raw.githubusercontent.com/adnandzebic/Senior-Design-Project/master/diagrams/connections-overview/_static/android.png"];
+   photon [label = "", background = "https://raw.githubusercontent.com/adnandzebic/Senior-Design-Project/master/diagrams/connections-overview/_static/photon.png"];
+   beaglebone [label = "", background = "https://raw.githubusercontent.com/adnandzebic/Senior-Design-Project/master/diagrams/connections-overview/_static/BBB.png"];
 
    LCD [fontsize = 40];
 
@@ -42,13 +42,13 @@
   <rect fill="rgb(0,0,0)" height="100" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="128" x="523" y="46" />
   <rect fill="rgb(0,0,0)" height="70" stroke="rgb(0,0,0)" style="filter:url(#filter_blur);opacity:0.7;fill-opacity:1" width="200" x="715" y="61" />
   <rect fill="rgb(255,255,255)" height="70" stroke="rgb(255,255,255)" width="200" x="64" y="55" />
-  <image height="70" width="200" x="64" xlink:href="_static/android.png" y="55" />
+  <image height="70" width="200" x="64" xlink:href="https://raw.githubusercontent.com/adnandzebic/Senior-Design-Project/master/diagrams/connections-overview/_static/android.png" y="55" />
   <rect fill="none" height="70" stroke="rgb(0,0,0)" width="200" x="64" y="55" />
   <rect fill="rgb(255,255,255)" height="100" stroke="rgb(255,255,255)" width="128" x="328" y="40" />
-  <image height="100" width="128" x="328" xlink:href="_static/photon.png" y="40" />
+  <image height="100" width="128" x="328" xlink:href="https://raw.githubusercontent.com/adnandzebic/Senior-Design-Project/master/diagrams/connections-overview/_static/photon.png" y="40" />
   <rect fill="none" height="100" stroke="rgb(0,0,0)" width="128" x="328" y="40" />
   <rect fill="rgb(255,255,255)" height="100" stroke="rgb(255,255,255)" width="128" x="520" y="40" />
-  <image height="100" width="128" x="520" xlink:href="_static/BBB.png" y="40" />
+  <image height="100" width="128" x="520" xlink:href="https://raw.githubusercontent.com/adnandzebic/Senior-Design-Project/master/diagrams/connections-overview/_static/BBB.png" y="40" />
   <rect fill="none" height="100" stroke="rgb(0,0,0)" width="128" x="520" y="40" />
   <rect fill="rgb(255,255,255)" height="70" stroke="rgb(0,0,0)" width="200" x="712" y="55" />
   <text fill="rgb(0,0,0)" font-family="sans-serif" font-size="40" font-style="normal" font-weight="normal" text-anchor="middle" textLength="74" x="812" y="109">LCD</text>
