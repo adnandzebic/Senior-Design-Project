@@ -16,5 +16,7 @@ $ blockdiag -f fonts/Roboto-Regular.ttf -Tpng connections-overview.diag
 ```
 
 Result:
-![][connections-overview.png]
-![][connections-overview.svg]
+http://i62.tinypic.com/x3gu2u.png
+<p align="center" >
+<img src="http://i62.tinypic.com/x3gu2u.png" alt="Connections Diagram" title="Connections Diagram">
+</p>
