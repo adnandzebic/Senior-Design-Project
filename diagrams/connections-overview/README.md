@@ -16,5 +16,5 @@ $ blockdiag -f fonts/Roboto-Regular.ttf -Tpng connections-overview.diag
 ```
 
 Result:
-![][_static/connections-overview.png]
-![][_static/connections-overview.svg]
+[][_static/connections-overview.png]
+[][_static/connections-overview.svg]
