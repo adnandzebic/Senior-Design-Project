@@ -656,7 +656,7 @@ public class TinkerFragment extends Fragment implements OnClickListener {
                         stringValue = (newValue == DigitalValue.HIGH.asInt()) ? "HIGH" : "LOW";
                     }
                     try {
-                        sparkDevice.callFunction("serialwrite", list("test");
+                        sparkDevice.callFunction("serialwrite", list("test"));
                         return (sparkDevice.callFunction(
                                 actionToFunctionName.get(stuff.pinAction),
                                 list(stuff.pinName, stringValue))==1) ? newValue : stuff.currentValue;
