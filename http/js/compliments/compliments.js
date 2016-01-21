@@ -1,4 +1,5 @@
-var steppedOnScale = true;
+var steppedOnScale;
+var readingPulseRate;
 
 var compliments = {
 	complimentLocation: '.compliment',
@@ -63,14 +64,25 @@ compliments.updateCompliment = function () {
     });
 
 
+    //if (steppedOnScale) {
+        //_list = [
+            //"Weight: " + weight + " lbs",
+            //"Pulse rate: " + pulseRate + " bpm",
+            //"Indoor temperature: " + temp + " &degF",
+            //"Indoor humidity: " + humidity + "%",
+            //"Dew point: " + dewpt
+        //];
+
+    if (weight > 0.5) {
+        steppedOnScale = true;
+    } else {
+        steppedOnScale = false;
+    }
+
     if (steppedOnScale) {
-        _list = [
-            "Weight: " + weight + " lbs",
-            "Pulse rate: " + pulseRate + " bpm",
-            "Indoor temperature: " + temp + " &degF",
-            "Indoor humidity: " + humidity + "%",
-            "Dew point: " + dewpt
-        ];
+        _list = ["Weight: " + weight + " lbs"];
+    } else if (readingPulseRate) {
+        _list = ["Pulse rate: " + pulseRate + " bpm"];
     } else if (hour >= 3 && hour < 12) {
 		// Morning compliments
 		_list = compliments.complimentList['morning'].slice();
