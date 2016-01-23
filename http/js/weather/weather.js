@@ -22,6 +22,7 @@ var weather = {
 		'13n':'wi-night-snow',
 		'50n':'wi-night-alt-cloudy-windy'
 	},
+	indoorTemperatureLocation: '.indoortemp',
 	temperatureLocation: '.temp',
 	windSunLocation: '.windsun',
 	forecastLocation: '.forecast',
@@ -60,6 +61,41 @@ weather.ms2Beaufort = function(ms) {
 	}
 	return 12;
 }
+
+/**
+ * Retrieves the indoor temperature and humidity from the DHT22 sensor
+ */
+weather.updateIndoorConditions = function () {
+
+    var deviceID = "3c0043000547343337373737";
+    var accessToken = "2bd6eb4fc98131d10b82d507507fb59fb80a0bc8";
+    var varName = "tempf";
+
+    requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + varName + "/?access_token=" + accessToken;
+
+	$.ajax({
+		type: 'GET',
+		url: requestURL,
+		dataType: 'json',
+		success: function (data) {
+
+			var _indoorTemperature = this.roundValue(data.result);
+
+			var _homeIcon = '<i class="fa fa-home dimmed"></i>';
+
+			var _newTempHtml = _homeIcon + ' ' + _indoorTemperature + '&deg;';
+
+			$(this.indoorTemperatureLocation).updateWithText(_newTempHtml, this.fadeInterval);
+
+		}.bind(this),
+		error: function () {
+
+		}
+	});
+
+}
+
+
 
 /**
  * Retrieves the current temperature and weather patter from the OpenWeatherMap API
@@ -162,6 +198,7 @@ weather.init = function () {
 	}
 
 	this.intervalId = setInterval(function () {
+        this.updateIndoorConditions();
 		this.updateCurrentWeather();
 		this.updateWeatherForecast();
 	}.bind(this), this.updateInterval);

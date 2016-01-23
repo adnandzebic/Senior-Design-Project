@@ -1,5 +1,7 @@
-var steppedOnScale;
-var readingPulseRate;
+var weight = 0;
+var pulseRate = 65.0;
+var steppedOnScale = false;
+var readingPulseRate = true;
 
 var compliments = {
 	complimentLocation: '.compliment',
@@ -27,42 +29,24 @@ compliments.updateCompliment = function () {
 
     var deviceID = "270038000947343337373738";
     var accessToken = "2bd6eb4fc98131d10b82d507507fb59fb80a0bc8";
-    var varName = "weight";
+    var weightScaleIsConnected = false;
 
-    requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + varName + "/?access_token=" + accessToken;
-    $.getJSON(requestURL, function(json) {
-        weight = json.result;
-        weight = parseFloat(weight).toFixed(1); // round decimal place
+    var onlineRequestURL = "https://api.particle.io/v1/devices/" + deviceID + "/?access_token=" + accessToken;
+
+    $.getJSON(onlineRequestURL, function(json) {
+        weightScaleIsConnected = json.connected;
     });
 
-    varName = "pulseRate"; // change varName to pulseRate
-    requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + varName + "/?access_token=" + accessToken;
-    $.getJSON(requestURL, function(json) {
-        pulseRate = json.result;
-        pulseRate = parseFloat(pulseRate).toFixed(1); // round decimal place
-    });
+    if (weightScaleIsConnected) {
 
-    varName = "tempf"; // change varName to pulseRate
-    requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + varName + "/?access_token=" + accessToken;
-    $.getJSON(requestURL, function(json) {
-        temp = json.result;
-        temp = parseFloat(temp).toFixed(1); // round decimal place
-    });
+        var varName = "weight";
 
-    varName = "humidity"; // change varName to pulseRate
-    requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + varName + "/?access_token=" + accessToken;
-    $.getJSON(requestURL, function(json) {
-        humidity = json.result;
-        humidity = parseFloat(humidity).toFixed(1); // round decimal place
-    });
-
-    varName = "dewptf"; // change varName to pulseRate
-    requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + varName + "/?access_token=" + accessToken;
-    $.getJSON(requestURL, function(json) {
-        dewpt = json.result;
-        dewpt = parseFloat(dewpt).toFixed(1); // round decimal place
-    });
-
+        weightRequestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + varName + "/?access_token=" + accessToken;
+        $.getJSON(weightRequestURL, function(json) {
+            weight = json.result;
+            weight = parseFloat(weight).toFixed(1); // round decimal place
+        });
+    }
 
     //if (steppedOnScale) {
         //_list = [
@@ -82,7 +66,8 @@ compliments.updateCompliment = function () {
     if (steppedOnScale) {
         _list = ["Weight: " + weight + " lbs"];
     } else if (readingPulseRate) {
-        _list = ["Pulse rate: " + pulseRate + " bpm"];
+	    var heartIcon = '<i class="fa fa-heartbeat dimmed"></i>';
+        _list = [heartIcon + ' ' + pulseRate + ' bpm'];
     } else if (hour >= 3 && hour < 12) {
 		// Morning compliments
 		_list = compliments.complimentList['morning'].slice();
