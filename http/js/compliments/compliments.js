@@ -47,6 +47,9 @@ compliments.updateCompliment = function () {
             weight = parseFloat(weight).toFixed(1); // round decimal place
         });
     }
+    else {
+        weight = 0.0;
+    }
 
     //if (steppedOnScale) {
         //_list = [

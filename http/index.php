@@ -16,7 +16,7 @@
 
 	<div class="top left"><div class="date small dimmed"></div><div class="time"></div><div class="calendar xxsmall"></div></div>
     <div class="top right">
-        <div class="indoortemp"></div>
+        <div class="indoorconditions medium dimmed"></div>
         <div class="windsun small dimmed"></div>
         <div class="temp"></div>
         <div class="forecast small dimmed"></div>

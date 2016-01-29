@@ -22,7 +22,7 @@ var weather = {
 		'13n':'wi-night-snow',
 		'50n':'wi-night-alt-cloudy-windy'
 	},
-	indoorTemperatureLocation: '.indoortemp',
+    indoorConditionsLocation: '.indoorconditions',
 	temperatureLocation: '.temp',
 	windSunLocation: '.windsun',
 	forecastLocation: '.forecast',
@@ -30,7 +30,7 @@ var weather = {
 	apiBase: 'http://api.openweathermap.org/data/',
 	weatherEndpoint: 'weather',
 	forecastEndpoint: 'forecast/daily',
-	updateInterval: config.weather.interval || 6000,
+	updateInterval: config.weather.interval || 25000,
 	fadeInterval: config.weather.fadeInterval || 1000,
 	intervalId: null
 }
@@ -67,11 +67,13 @@ weather.ms2Beaufort = function(ms) {
  */
 weather.updateIndoorConditions = function () {
 
+    var _newTempHtml = '';
+
     var deviceID = "3c0043000547343337373737";
     var accessToken = "2bd6eb4fc98131d10b82d507507fb59fb80a0bc8";
     var varName = "tempf";
 
-    requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + varName + "/?access_token=" + accessToken;
+    var requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + varName + "/?access_token=" + accessToken;
 
 	$.ajax({
 		type: 'GET',
@@ -81,17 +83,38 @@ weather.updateIndoorConditions = function () {
 
 			var _indoorTemperature = this.roundValue(data.result);
 
-			var _homeIcon = '<i class="fa fa-home dimmed"></i>';
+			var _homeIcon = '<i class="fa fa-home xdimmed"></i>';
 
-			var _newTempHtml = _homeIcon + ' ' + _indoorTemperature + '&deg;';
-
-			$(this.indoorTemperatureLocation).updateWithText(_newTempHtml, this.fadeInterval);
+			_newTempHtml = _homeIcon + ' ' + _indoorTemperature + '&deg;';
 
 		}.bind(this),
 		error: function () {
 
 		}
 	});
+
+	varName = "humidity";
+	requestURL = "https://api.spark.io/v1/devices/" + deviceID + "/" + varName + "/?access_token=" + accessToken;
+
+	$.ajax({
+		type: 'GET',
+		url: requestURL,
+		dataType: 'json',
+		success: function (data) {
+
+			var _indoorHumidity = this.roundValue(data.result);
+
+			var _humidityIcon = '<i class="fa fa-tint xdimmed"></i>';
+
+			_newTempHtml = _newTempHtml + ' ' + _humidityIcon + ' ' + _indoorHumidity + '%';
+
+		}.bind(this),
+		error: function () {
+
+		}
+	});
+
+    $(this.indoorConditionsLocation).updateWithText(_newTempHtml, this.fadeInterval);
 
 }
 
